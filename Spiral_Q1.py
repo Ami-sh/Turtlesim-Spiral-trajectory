@@ -26,7 +26,7 @@ def move_spiral():
     while not rospy.is_shutdown():
         pub.publish(move_cmd)
         move_cmd.linear.x = move_cmd.linear.x + 0.000001
-        #0.000001 is an arbitrary number which helps in making the spiral trajectory, we can ask the rate of increase 
+        #0.000001 is an arbitrary number which helps in making the spiral trajectory clearly visible and observable, we can ask the rate of increase 
          #from user and make the changes in order to increment the radius 
         #here tangentialvelocity is 0.000001 * (default publishing rate in hertz) every sec.
         #i don't know the default publishing rate value in ROS
